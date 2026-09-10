@@ -1,17 +1,11 @@
+#include "vibe.hpp"
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
 int main()
 {
-	sf::RenderWindow window( sf::VideoMode( { 200, 200 } ), "SFML works!" );
-
-	sf::CircleShape shape( 50.f );
-	sf::CircleShape shape2( 25.f );
-	shape2.setPosition({150/2, 150/2});
-	shape.setPosition({100/2, 100/2});
-
-	shape.setFillColor( sf::Color::Red );
-	shape2.setFillColor( sf::Color::White );
+	float size = 500.f;
+	sf::RenderWindow window( sf::VideoMode( { 1000, 1000 } ), "SFML works!" );
 
 	while ( window.isOpen() )
 	{
@@ -22,8 +16,7 @@ int main()
 		}
 
 		window.clear();
-		window.draw( shape );
-		window.draw( shape2 );
+		drawCircles(window, 100, 1000);
 		window.display();
 	}
 }
