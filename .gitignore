@@ -40,6 +40,9 @@
 *.app
 
 # Build directories
+/build/*
+/build/
+/build
 build/
 build/*
 Build/
